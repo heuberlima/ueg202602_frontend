@@ -18,7 +18,7 @@ export class ListarMarca  implements OnInit{
 
   ngOnInit(): void {
     console.log("Inicializando o componente ListarMarca");
-      this.listarMarcas();
+    this.listarMarcas();
   }
 
   listarMarcas() {
@@ -30,6 +30,10 @@ export class ListarMarca  implements OnInit{
       this.cdr.detectChanges(); // força atualização da tela
       
     });
+  }
+
+  inserirMarca(){
+    this.router.navigate(['/inserir-marca']);
   }
   
 }
