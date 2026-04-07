@@ -1,0 +1,30 @@
+<h2 class="text-center">Lista de Marcas</h2>
+<div class="container">
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (marca of marcas; track marca.codigo) {
+            <tr>
+                <td>{{ marca.codigo }}</td>
+                <td>{{ marca.nome }}</td>
+                <td>
+                <button class="btn btn-success" style="margin-left: 10px">Consultar</button>
+                <button class="btn btn-info" style="margin-left: 10px">Alterar</button>
+                <button class="btn btn-danger" style="margin-left: 10px">Excluir</button>
+                </td>
+            </tr>
+            }
+        </tbody>
+
+    </table>
+
+    <br>
+    <button class="btn btn-info" style="margin-left: 10px">Inserir Nova Marca</button>
+</div>
